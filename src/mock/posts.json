@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "title": "Interesting post 1",
+      "body": "Very important information",
+      "date": "01/11/2018",
+      "postedBy": "best user 1"
+    },
+    {
+      "title": "Interesting post 2",
+      "body": "Very important information",
+      "date": "01/11/2018",
+      "postedBy": "best user 2"
+    },
+    {
+      "title": "Interesting post 3",
+      "body": "Very important information",
+      "date": "01/11/2018",
+      "postedBy": "best user 3"
+    },
+    {
+      "title": "Interesting post 4",
+      "body": "Very important information",
+      "date": "01/11/2018",
+      "postedBy": "best user 4"
+    },
+    {
+      "title": "Interesting post 5",
+      "body": "Very important information",
+      "date": "01/11/2018",
+      "postedBy": "best user 5"
+    },
+    {
+      "title": "Interesting post 6",
+      "body": "Very important information",
+      "date": "01/11/2018",
+      "postedBy": "best user 6"
+    },
+  ]
+}

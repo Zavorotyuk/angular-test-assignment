@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "name": "user 1",
+      "surname": "user 1",
+      "photo": ""
+    },
+    {
+      "name": "user 2",
+      "surname": "user 2",
+      "photo": ""
+    },
+    {
+      "name": "user 3",
+      "surname": "user 3",
+      "photo": ""
+    },
+    {
+      "name": "user 4",
+      "surname": "user 4",
+      "photo": ""
+    },
+    {
+      "name": "user 5",
+      "surname": "user 5",
+      "photo": ""
+    },
+    {
+      "name": "user 6",
+      "surname": "user 6",
+      "photo": ""
+    },
+
+  ]
+}
