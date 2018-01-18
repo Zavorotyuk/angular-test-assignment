@@ -1,5 +1,5 @@
 <div class="container">
-    <form class="form-horizontal" role="form" method="POST" action="/register">
+    <form class="form-horizontal" role="form" [formGroup]="signupForm" (ngSubmit)="signup(signupForm.value)">
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
@@ -16,7 +16,7 @@
                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
                         <input type="text" name="name" class="form-control" id="name"
-                               placeholder="John Doe" required autofocus>
+                               placeholder="John Doe" formControlName="name">
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
                         <input type="text" name="email" class="form-control" id="email"
-                               placeholder="you@example.com" required autofocus>
+                               placeholder="you@example.com" formControlName="email">
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
                         <input type="password" name="password" class="form-control" id="password"
-                               placeholder="Password" required>
+                               placeholder="Password" formControlName="password">
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                             <i class="fa fa-repeat"></i>
                         </div>
                         <input type="password" name="password-confirmation" class="form-control"
-                               id="password-confirm" placeholder="Password" required>
+                               id="password-confirm" placeholder="Password" formControlName="confirm-password">
                     </div>
                 </div>
             </div>
