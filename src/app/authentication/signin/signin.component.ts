@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../core/auth.service';
+import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -7,9 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
 
-  constructor() { }
+  signinForm: FormGroup;
 
-  ngOnInit() {
+  constructor(
+    private auth: AuthService,
+    private fb: FormBuilder,
+    private router: Router
+  ) {
+      this.signinForm = fb.group({
+        'email' : [null, Validators.required],
+        'password' : [null, Validators.required],
+      })
+    }
+
+  ngOnInit() {}
+
+  signin(formValue) {
+    this.auth.signin(formValue).subscribe(
+      data => {
+        this.router.navigate(['/home']);
+      },
+      err => {
+
+      }
+    )
   }
 
 }
