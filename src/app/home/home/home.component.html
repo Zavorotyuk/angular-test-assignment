@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <nav class="navbar navbar-light bg-faded justify-content-between flex-nowrap flex-row">
+      <div class="container">
+          <a href="/" class="navbar-brand float-left">AlmostTwitter</a>
+          <ul class="nav navbar-nav flex-row float-right">
+              <li class="nav-item">
+                  <a class="nav-link pr-3" [routerLink]="['/home/tweets']"  routerLinkActive="active">Tweets</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/home/friends']"  routerLinkActive="active">Friends</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+  <div class="content">
+      <router-outlet></router-outlet>
+  </div>
+</div>
