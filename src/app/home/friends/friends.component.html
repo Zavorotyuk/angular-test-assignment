@@ -1,3 +1,16 @@
-<p>
-  friends works!
-</p>
+<div class="container">
+    <div class="row justify-content-md-center posts">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 card-wrapper" align="center" *ngFor="let user of friendsList">
+            <div class="card-deck">
+                <div class="card" style="width: 20rem;">
+                    <img class="card-img-top card-image" src="/assets/background.jpeg" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title"><i class="fa fa-user" aria-hidden="true"></i> {{user.name}} {{user.surname}}</h4>
+                        <p class="card-text"></p>
+                        <a class="btn btn-secondary">Follow</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

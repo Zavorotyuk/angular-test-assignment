@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "title": "Interesting post 1",
+      "body": "Some information",
+      "postedBy": "user 1"
+    },
+    {
+      "title": "Interesting post 2",
+      "body": "Some information",
+      "postedBy": "user 2"
+    },
+    {
+      "title": "Interesting post 3",
+      "body": "Some information",
+      "postedBy": "user 3"
+    },
+    {
+      "title": "Interesting post 4",
+      "body": "Some information",
+      "postedBy": "user 4"
+    },
+    {
+      "title": "Interesting post 5",
+      "body": "Some information",
+      "postedBy": "user 5"
+    },
+    {
+      "title": "Interesting post 6",
+      "body": "Some information",
+      "postedBy": "user 6"
+    }
+  ]
+}
