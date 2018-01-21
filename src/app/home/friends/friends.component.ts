@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FriendsService } from '../services/friends.service';
+import { ToastService } from '../../core/toast.service';
 
 @Component({
   selector: 'app-friends',
@@ -10,7 +11,10 @@ export class FriendsComponent implements OnInit {
 
   friendsList = [];
 
-  constructor(private friends: FriendsService) { }
+  constructor(
+    private friends: FriendsService,
+    private toast: ToastService,
+  ) { }
 
   ngOnInit() {
     this.friends.getFriends().subscribe(
@@ -18,6 +22,17 @@ export class FriendsComponent implements OnInit {
         this.friendsList = data.users;
       },
       err => {}
+    )
+  }
+
+  followUser(user) {
+    this.friends.followUser(user).subscribe(
+      data => {
+        this.toast.success('This user will be followed')
+      },
+      err => {
+
+      }
     )
   }
 

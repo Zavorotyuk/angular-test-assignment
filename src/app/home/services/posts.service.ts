@@ -12,4 +12,28 @@ export class PostsService {
     return this.http.get("./assets/mock/posts.json")
   }
 
+  addPost(data): Observable<any> {
+    const addPostObservable = new Observable((observer) => {
+      observer.next({'success': true})
+      observer.complete()
+    })
+    return addPostObservable;
+  }
+
+  addReply(data): Observable<any> {
+    const addReplyObservable = new Observable((observer) => {
+      observer.next({'success': true})
+      observer.complete()
+    })
+    return addReplyObservable;
+  }
+
+  like(postId): Observable<any> {
+    const likeObservable = new Observable((observer) => {
+      observer.next({'success': true})
+      observer.complete()
+    })
+    return likeObservable;
+  }
+
 }

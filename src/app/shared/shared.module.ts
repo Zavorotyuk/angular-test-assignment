@@ -5,6 +5,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { CollapseModule } from 'ngx-bootstrap';
+import { CommentModalComponent } from './components/comment-modal/comment-modal.component';
 
 
 @NgModule({
@@ -13,14 +14,17 @@ import { CollapseModule } from 'ngx-bootstrap';
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
-    CollapseModule.forRoot()
+    CollapseModule.forRoot(),
+    ReactiveFormsModule,
+    FormsModule
   ],
-  declarations: [],
+  declarations: [CommentModalComponent],
   exports: [
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
     BsDropdownModule, TooltipModule, ModalModule, CollapseModule
-  ]
+  ],
+  entryComponents: [CommentModalComponent]
 })
 export class SharedModule { }

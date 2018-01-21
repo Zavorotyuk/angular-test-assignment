@@ -10,4 +10,12 @@ export class FriendsService {
   getFriends(): Observable<any> {
     return this.http.get("./assets/mock/users.json")
   }
+
+  followUser(user): Observable<any> {
+    const followObservable = new Observable((observer) => {
+      observer.next({'success': true})
+      observer.complete()
+    })
+    return followObservable;
+  }
 }

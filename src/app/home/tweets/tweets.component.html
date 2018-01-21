@@ -27,8 +27,8 @@
                     <h4 class="card-title" align="left" style="font-size: 14px">{{tweet.postedBy}}</h4>
                     <p class="card-text">{{tweet.body}}</p>
                     <div class="actions" align="left">
-                        <a class="btn btn-xs btn-secondary"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
-                        <a class="btn btn-xs btn-secondary"><i class="fa fa-comments" aria-hidden="true"></i></a>
+                        <a class="btn btn-xs btn-secondary" (click)="likeTweet(tweet.id)"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                        <a class="btn btn-xs btn-secondary" (click)="showCommentModal(tweet)"><i class="fa fa-comments" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
