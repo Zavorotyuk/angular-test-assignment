@@ -19,6 +19,13 @@
                      </div>
                  </div>
              </div>
+             <div class="col-md-3">
+                 <div class="form-control-feedback">
+                         <span class="text-danger align-middle">
+                             <div *ngIf="signinForm.get('email').hasError('required') && !signinForm.get('email').pristine">Email cannot be empty</div>
+                         </span>
+                 </div>
+             </div>
          </div>
          <div class="row">
              <div class="col-md-3"></div>
@@ -35,14 +42,14 @@
              <div class="col-md-3">
                  <div class="form-control-feedback">
                      <span class="text-danger align-middle">
-                     <!-- Put password error message here -->
+                         <div *ngIf="signinForm.get('password').hasError('required') && !signinForm.get('password').pristine">Email cannot be empty</div>
                      </span>
                  </div>
              </div>
          </div>
          <div class="row" style="padding-top: 1rem">
              <div class="col-md-12" align="center">
-                 <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Sign in</button>
+                 <button type="submit" class="btn btn-primary" [disabled]="!signinForm.valid"><i class="fa fa-sign-in"></i> Sign in</button>
              </div>
          </div>
          <div class="row">

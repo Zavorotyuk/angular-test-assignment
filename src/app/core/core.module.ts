@@ -3,6 +3,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthService } from './auth.service';
 import { ToastService } from './toast.service';
 import { ToastrModule } from 'ngx-toastr';
+import { AuthGuardService } from './auth-guard.service';
+
 
 
 @NgModule({
@@ -13,7 +15,8 @@ import { ToastrModule } from 'ngx-toastr';
   declarations: [],
   providers: [
     AuthService,
-    ToastService
+    ToastService,
+    AuthGuardService
   ]
 })
 export class CoreModule { }
