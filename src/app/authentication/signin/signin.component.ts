@@ -28,6 +28,8 @@ export class SigninComponent implements OnInit {
   signin(formValue) {
     this.auth.signin(formValue).subscribe(
       data => {
+        //In order for the auth guard to work
+        this.auth.setUserData(data);
         this.router.navigate(['/home']);
       },
       err => {

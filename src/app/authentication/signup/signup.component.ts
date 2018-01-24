@@ -30,6 +30,7 @@ export class SignupComponent implements OnInit {
   signup(formValue) {
     this.auth.signup(formValue).subscribe(
       data => {
+        this.auth.setUserData(data);
         this.router.navigate(['/home']);
       },
       err => {

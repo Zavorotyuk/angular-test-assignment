@@ -1,10 +1,11 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuardService as AuthGuard } from './core/auth-guard.service';
 
 export const router: Routes = [
   {
     path: '',
-    redirectTo: 'authentication',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -13,7 +14,8 @@ export const router: Routes = [
   },
   {
     path: 'home',
-    loadChildren: 'app/home/home.module#HomeModule'
+    loadChildren: 'app/home/home.module#HomeModule',
+    canActivate: [AuthGuard]
 }
 ];
 
