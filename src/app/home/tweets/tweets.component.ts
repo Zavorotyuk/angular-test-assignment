@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { PostsService } from '../services/posts.service';
 import { CommentsService } from '../services/comments.service';
+import { TweetDetailsService } from '../services/tweet-details.service';
 import { ToastService } from '../../core/toast.service';
 
 
@@ -19,6 +20,7 @@ export class TweetsComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private posts: PostsService,
+    private tweetDetails: TweetDetailsService,
     private toast: ToastService,
     private comments: CommentsService
   ) {
@@ -30,6 +32,7 @@ export class TweetsComponent implements OnInit {
   ngOnInit() {
     this.posts.getPosts().subscribe(
       data => {
+        this.posts.saveTweetsInStorage(data);
         this.tweets = data.posts;
       },
       err => {}
@@ -41,9 +44,7 @@ export class TweetsComponent implements OnInit {
       data => {
         this.toast.success('Your tweet will be posted');
       },
-      err => {
-
-      }
+      err => {}
     )
   }
 
@@ -56,6 +57,7 @@ export class TweetsComponent implements OnInit {
     this.replySubscription = this.comments.onSendReply.skip(1).subscribe(result => {
       this.posts.addReply(result).subscribe(
         data => {
+          this.tweets = data.posts;
           this.comments.hideCommentModal();
           this.replySubscription.unsubscribe();
           this.toast.success('Your reply will be sent');
@@ -74,6 +76,10 @@ export class TweetsComponent implements OnInit {
 
       }
     )
+  }
+
+  showDetailsModal(tweet) {
+    this.tweetDetails.showDetailsModal(tweet);
   }
 
 }

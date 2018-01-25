@@ -7,6 +7,7 @@ import { FriendsComponent } from './friends/friends.component';
 import { PostsService } from './services/posts.service';
 import { FriendsService } from './services/friends.service';
 import { CommentsService } from './services/comments.service';
+import { TweetDetailsService } from './services/tweet-details.service';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { CommentsService } from './services/comments.service';
     homeRouter
   ],
   declarations: [HomeComponent, TweetsComponent, FriendsComponent],
-  providers: [PostsService, FriendsService, CommentsService]
+  providers: [PostsService, FriendsService, CommentsService, TweetDetailsService]
 })
 export class HomeModule { }
