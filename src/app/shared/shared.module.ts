@@ -6,6 +6,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { CollapseModule } from 'ngx-bootstrap';
 import { CommentModalComponent } from './components/comment-modal/comment-modal.component';
+import { TweetDetailsComponent } from './components/tweet-details/tweet-details.component';
 
 
 @NgModule({
@@ -18,13 +19,13 @@ import { CommentModalComponent } from './components/comment-modal/comment-modal.
     ReactiveFormsModule,
     FormsModule
   ],
-  declarations: [CommentModalComponent],
+  declarations: [CommentModalComponent, TweetDetailsComponent],
   exports: [
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
     BsDropdownModule, TooltipModule, ModalModule, CollapseModule
   ],
-  entryComponents: [CommentModalComponent]
+  entryComponents: [CommentModalComponent, TweetDetailsComponent]
 })
 export class SharedModule { }

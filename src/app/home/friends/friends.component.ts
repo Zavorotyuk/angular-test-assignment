@@ -19,6 +19,7 @@ export class FriendsComponent implements OnInit {
   ngOnInit() {
     this.friends.getFriends().subscribe(
       data => {
+        this.friends.saveFriendsInStorage(data);
         this.friendsList = data.users;
       },
       err => {}
@@ -28,11 +29,20 @@ export class FriendsComponent implements OnInit {
   followUser(user) {
     this.friends.followUser(user).subscribe(
       data => {
+        this.friendsList = data.users;
         this.toast.success('This user will be followed')
       },
-      err => {
+      err => {}
+    )
+  }
 
-      }
+  unfollowUser(user) {
+    this.friends.unfollowUser(user).subscribe(
+      data => {
+        this.friendsList = data.users;
+        this.toast.success('This user will be unfollowed')
+      },
+      err => {}
     )
   }
 
