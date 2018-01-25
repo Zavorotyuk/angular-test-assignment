@@ -1,34 +1,46 @@
 {
   "users": [
     {
+      "id": 1,
       "name": "name",
       "surname": "surname",
-      "photo": ""
+      "photo": "",
+      "isFollowedByMe": false
     },
     {
+      "id": 2,
       "name": "name",
       "surname": "surname",
-      "photo": ""
+      "photo": "",
+      "isFollowedByMe": false
     },
     {
+      "id": 3,
       "name": "name",
       "surname": "surname",
-      "photo": ""
+      "photo": "",
+      "isFollowedByMe": false
     },
     {
+      "id": 4,
       "name": "name",
       "surname": "surname",
-      "photo": ""
+      "photo": "",
+      "isFollowedByMe": false
     },
     {
+      "id": 5,
       "name": "name",
       "surname": "surname",
-      "photo": ""
+      "photo": "",
+      "isFollowedByMe": false
     },
     {
+      "id": 6,
       "name": "name",
       "surname": "surname",
-      "photo": ""
+      "photo": "",
+      "isFollowedByMe": false
     }
   ]
 }
